@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="baidu-site-verification" content="Ug8AHWnL95">
+    
+
+    
+    <title>JavaScript学习笔记 | ZengGuanBao的博客</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="JavaScript">
+    
+    <meta name="description" content="工具：Visual Studio Code/MarkdownPad技术：JavaScript ##JavaScript类型 ###基本类型有六种： null，undefined，boolean，number，string，symbol ###typeof 对于基本类型，除了 null 都可以显示正确的类型    typeof 1 // ‘number’    typeof ‘1’ // ‘stri">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript学习笔记">
+<meta property="og:url" content="https://zengguanbao.github.io/2019/03/14/js学习笔记/index.html">
+<meta property="og:site_name" content="ZengGuanBao的博客">
+<meta property="og:description" content="工具：Visual Studio Code/MarkdownPad技术：JavaScript ##JavaScript类型 ###基本类型有六种： null，undefined，boolean，number，string，symbol ###typeof 对于基本类型，除了 null 都可以显示正确的类型    typeof 1 // ‘number’    typeof ‘1’ // ‘stri">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-23T03:12:35.619Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript学习笔记">
+<meta name="twitter:description" content="工具：Visual Studio Code/MarkdownPad技术：JavaScript ##JavaScript类型 ###基本类型有六种： null，undefined，boolean，number，string，symbol ###typeof 对于基本类型，除了 null 都可以显示正确的类型    typeof 1 // ‘number’    typeof ‘1’ // ‘stri">
+    
+
+    
+
+    
+        <link rel="icon" href="/css/images/thumb-default-small.png">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+    <link rel="stylesheet" href="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.css">
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                    <div id="aplayer"></div>
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/archives">文章</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/技术/">技术</a></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/demo/index.html">Demo</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/技术/">技术</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-js学习笔记" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        JavaScript学习笔记
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/03/14/js学习笔记/" class="article-date">
+            <time datetime="2019-03-14T01:42:20.803Z" itemprop="datePublished">2019-03-14</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>工具：Visual Studio Code/MarkdownPad<br>技术：JavaScript</p>
+<p>##JavaScript类型</p>
+<p>###基本类型有六种： null，undefined，boolean，number，string，symbol</p>
+<p>###typeof 对于基本类型，除了 null 都可以显示正确的类型<br>    typeof 1 // ‘number’<br>    typeof ‘1’ // ‘string’<br>    typeof undefined // ‘undefined’<br>    typeof true // ‘boolean’<br>    typeof Symbol() // ‘symbol’<br>    typeof b // b 没有声明，但是还会显示 undefined</p>
+<p>###想获得一个变量的正确类型，可以通过 Object.prototype.toString.call(xx)。这样我们就可以获得类似 [object Type] 的字符串。<br>    console.log(Object.prototype.toString.call(“jerry”));//[object String]<br>    console.log(Object.prototype.toString.call(12));//[object Number]<br>    console.log(Object.prototype.toString.call(true));//[object Boolean]<br>    console.log(Object.prototype.toString.call(undefined));//[object Undefined]<br>    console.log(Object.prototype.toString.call(null));//[object Null]<br>    console.log(Object.prototype.toString.call({name: “jerry”}));//[object Object]<br>    console.log(Object.prototype.toString.call(function(){}));//[object Function]<br>    console.log(Object.prototype.toString.call([]));//[object Array]<br>    console.log(Object.prototype.toString.call(new Date));//[object Date]<br>    console.log(Object.prototype.toString.call(/\d/));//[object RegExp]<br>    function Person(){};<br>    console.log(Object.prototype.toString.call(new Person));//[object Object]</p>
+<p>###js中的instanceof运算符</p>
+<p>instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。</p>
+<p>语法：obj instanceof Object;//true 实例obj在不在Object构造函数中</p>
+<ol>
+<li><p><strong>instanceof的普通的用法，obj instanceof Object 检测Object.prototype是否存在于参数obj的原型链上。</strong><br>Person的原型在p的原型链中</p>
+<pre><code>function Person(){};
+var p =new Person();
+console.log(p instanceof Person);//true
+</code></pre></li>
+<li><p><strong>继承中判断实例是否属于它的父类</strong><br>Student和Person都在s的原型链中</p>
+<pre><code>function Person(){};
+function Student(){};
+var p =new Person();
+Student.prototype=p;//继承原型
+var s=new Student();
+console.log(s instanceof Student);//true
+console.log(s instanceof Person);//true
+</code></pre></li>
+<li><p><strong>复杂用法</strong>，这里的案例要有熟练的原型链的认识才能理解</p>
+<pre><code>function Person() {}
+console.log(Object instanceof Object); //true
+//第一个Object的原型链：Object=&gt;
+//Object.__proto__ =&gt; Function.prototype=&gt;Function.prototype.__proto__=&gt;Object.prototype
+//第二个Object的原型：Object=&gt; Object.prototype
+
+console.log(Function instanceof Function); //true
+//第一个Function的原型链：Function=&gt;Function.__proto__ =&gt; Function.prototype
+//第二个Function的原型：Function=&gt;Function.prototype
+
+console.log(Function instanceof Object);   //true
+//Function=&gt;
+//Function.__proto__=&gt;Function.prototype=&gt;Function.prototype.__proto__=&gt;Object.prototype
+//Object =&gt; Object.prototype
+
+console.log(Person instanceof Function);  //true
+//Person=&gt;Person.__proto__=&gt;Function.prototype
+//Function=&gt;Function.prototype
+
+console.log(String instanceof String);   //false
+//第一个String的原型链：String=&gt;
+//String.__proto__=&gt;Function.prototype=&gt;Function.prototype.__proto__=&gt;Object.prototype
+//第二个String的原型链：String=&gt;String.prototype
+
+console.log(Boolean instanceof Boolean); //false
+//第一个Boolean的原型链：Boolean=&gt;
+//Boolean.__proto__=&gt;Function.prototype=&gt;Function.prototype.__proto__=&gt;Object.prototype
+//第二个Boolean的原型链：Boolean=&gt;Boolean.prototype
+
+console.log(Person instanceof Person); //false
+//第一个Person的原型链：Person=&gt;
+//Person.__proto__=&gt;Function.prototype=&gt;Function.prototype.__proto__=&gt;Object.prototype
+//第二个Person的原型链：Person=&gt;Person.prototype
+</code></pre></li>
+</ol>
+<ol start="4">
+<li><p><strong>总结</strong><br>对应上述规范做个函数模拟A instanceof B：</p>
+<pre><code>function _instanceof(A, B) {
+    var O = B.prototype;// 取B的显示原型
+    A = A.__proto__;// 取A的隐式原型
+    while (true) {
+        //Object.prototype.__proto__ === null
+        if (A === null)
+        return false;
+        if (O === A)// 这里重点：当 O 严格等于 A 时，返回 true
+        return true;
+        A = A.__proto__;
+    }
+}
+</code></pre><p>###对象中的原型方法<br>首先会调用 valueOf 然后调用 toString，Symbol.toPrimitive （该方法在转基本类型时调用优先级最高），方法你是可以重写的</p>
+<p> let a = {<br>   valueOf() {<br> return 0;<br>   },<br>   toString() {<br> return ‘1’;<br>   },<br>   <a href>Symbol.toPrimitive</a> {<br> return 2;<br>   }<br> }<br> 1 + a // =&gt; 3<br> ‘1’ + a // =&gt; ‘12’</p>
+</li>
+</ol>
+
+        </div>
+        <footer class="article-footer">
+            
+
+    <p><i class="fa fa-share" style="margin-right: 5px;"></i>分享到</p>
+<div class="bdsharebuttonbox">
+  <a href="#" class="bds_more" data-cmd="more"></a>
+  <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+  <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+  <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+  <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+  <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+  <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+  <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+  <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+</div>
+<script>
+  window._bd_share_config = {
+    "common": {
+      "bdSnsKey": {},
+      "bdText": "",
+      "bdMini": "2",
+      "bdMiniList": false,
+      "bdPic": "",
+      "bdStyle": "1",
+      "bdSize": "24"
+    },
+    "share": {},
+    // 图片分享
+    // "image": {
+    //   "viewList": ["fbook", "twi", "linkedin", "qzone", "tsina", "douban", "weixin", "evernotecn"],
+    //   "viewText": "分享到：",
+    //   "viewSize": "16"
+    // }
+  };
+  with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src =
+    '/static/api/js/share.js?v=89860593.js?'];
+</script>
+
+
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="valine-thread"></div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ZengGuanBao" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/04/23/移动端开发/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            移动端开发中的meta/css/@media
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/11/06/IE中使用ajax碰到的问题/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">IE中使用ajax碰到的问题</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                <div class="widget-wrap widget-list">
+    <h3 class="widget-title">打赏他</h3>
+    <div class="widget" style="overflow:hidden;">
+      <div style="float: left;width: 48%;border: 2px solid #EA6000;border-radius: 5px;text-align: center;">
+          <img src="/css/images/zhifubao.png" alt="支付宝" width="100%" style="border-radius: 5px;">
+          <p style="background-color: #EA6000;color: #fff;">支付宝</p>
+      </div>
+      <div style="float: left;width: 48%;border: 2px solid #EA6000;border-radius: 5px;margin-left: 1%;text-align: center;">
+          <img src="/css/images/weixin.png" alt="微信" width="100%" style="border-radius: 5px;">
+          <p style="background-color: #EA6000;color: #fff;">微信</p>
+      </div>
+    </div>
+</div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/30/Git-最简单的本地项目变成版本仓库，然后把内容推送到GitHub仓库/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://images2015.cnblogs.com/blog/1118105/201703/1118105-20170304200307126-1342942362.png)" alt="Git-最简单的本地项目变成版本仓库，然后把内容推送到GitHub仓库" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a></p>
+                            <p class="item-title"><a href="/2019/04/30/Git-最简单的本地项目变成版本仓库，然后把内容推送到GitHub仓库/" class="title">Git-最简单的本地项目变成版本仓库，然后把内容推送到GitHub仓库</a></p>
+                            <p class="item-date"><time datetime="2019-04-30T01:48:33.376Z" itemprop="datePublished">2019-04-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/30/微信小程序入门教程实例讲解/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a></p>
+                            <p class="item-title"><a href="/2019/04/30/微信小程序入门教程实例讲解/" class="title">微信小程序入门教程实例讲解</a></p>
+                            <p class="item-date"><time datetime="2019-04-30T01:44:51.589Z" itemprop="datePublished">2019-04-30</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/28/个人前端知识体系详解/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2019/04/28/个人前端知识体系详解/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2019-04-28T01:39:29.583Z" itemprop="datePublished">2019-04-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/25/HTML5-WebSocket/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a></p>
+                            <p class="item-title"><a href="/2019/04/25/HTML5-WebSocket/" class="title">HTML5-WebSocket</a></p>
+                            <p class="item-date"><time datetime="2019-04-25T01:20:45.625Z" itemprop="datePublished">2019-04-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2019/04/23/移动端开发/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/技术/">技术</a></p>
+                            <p class="item-title"><a href="/2019/04/23/移动端开发/" class="title">移动端开发中的meta/css/@media</a></p>
+                            <p class="item-date"><time datetime="2019-04-23T02:33:44.691Z" itemprop="datePublished">2019-04-23</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">3</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/HTML5-WebSocket/" style="font-size: 10px;">HTML5-WebSocket</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="//mat1.gtimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+<footer id="footer">
+  <div class="container">
+    <div class="container-inner">
+      <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+      <div class="credit">
+        <!-- <h1 class="logo-wrap">
+          <a href="/" class="logo"></a>
+        </h1> -->
+        <p>&copy; 2019 ZengGuanBao</p>
+        <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ZengGuanBao" target="_blank">ZengGuanBao</a></p>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <div class="powered-by">
+          <i class="fa fa-user-md"></i>
+          <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+        </div>
+      </div>
+      <div class="footer-plugins">
+        
+    
+
+
+      </div>
+    </div>
+  </div>
+</footer>
+<script language="JavaScript">
+  var music = new Array();
+  $.ajax({
+    type: "GET",
+    url: 'https://api.mlwei.com/music/api/?key=523077333&id=3641614987&type=songlist&cache=1',
+    dataType: 'json',
+    success: function (result) {
+      var ap = new APlayer({
+        element: document.getElementById('aplayer'),
+        theme: '2C2C2E',
+        lrcType: 3,
+        volume: 1,
+        mutex: true,
+        autoplay: true,
+        listFolded: true,
+        storageName: 'aplayer-setting',
+        audio: result.Body
+      });
+    }
+  });
+  var now = new Date();
+  function createtime() {
+    var grt = new Date("05/14/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+    now.setTime(now.getTime() + 250);
+    days = (now - grt) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if (String(hnum).length == 1) { hnum = "0" + hnum; } minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if (String(mnum).length == 1) { mnum = "0" + mnum; }
+    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if (String(snum).length == 1) { snum = "0" + snum; }
+    document.getElementById("timeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+  }
+  setInterval("createtime()", 250);
+</script>
+        
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script>
+        new Valine({
+            el: '#valine-thread' ,
+            notify: 'false',
+            verify: 'false',
+            app_id: 'HUBiHxM2V3dI9QM6nwNnXni3-gzGzoHsz',
+            app_key: 'gX653jYGwGyS70cLn1cvVDHW',
+            placeholder: '请输入您的看法！',
+            pageSize: '10',
+            avatar: 'identicon',
+            avatar_cdn:  'https://gravatar.loli.net/avatar/',
+            visitor: 'true'
+        });
+    </script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+    <a href="https://github.com/ZengGuanBao"><img style="position: absolute; top: 0; left: 0; border: 0;" src="/css/images/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
+</body>
+</html>
