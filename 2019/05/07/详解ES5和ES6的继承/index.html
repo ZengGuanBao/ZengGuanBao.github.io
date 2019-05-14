@@ -20,12 +20,12 @@
 <meta property="og:site_name" content="ZengGuanBao的博客">
 <meta property="og:description" content="##详解ES5和ES6的继承ES5继承构造函数、原型和实例的关系：每一个构造函数都有一个原型对象，每一个原型对象都有一个指向构造函数的指针，而每一个实例都包含一个指向原型对象的内部指针， 原型链实现继承 基本思想：利用原型让一个引用类型继承另一个引用类型的属性和方法，即让原型对象等于另一个类型的实例 基本模式： function SuperType(){       this.property =">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/4c8P5p1.png">
-<meta property="og:updated_time" content="2019-05-07T02:20:46.618Z">
+<meta property="og:image" content="https://zengguanbao.github.io/images/es5jichen.png">
+<meta property="og:updated_time" content="2019-05-14T09:19:53.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZengGuanBao的博客">
 <meta name="twitter:description" content="##详解ES5和ES6的继承ES5继承构造函数、原型和实例的关系：每一个构造函数都有一个原型对象，每一个原型对象都有一个指向构造函数的指针，而每一个实例都包含一个指向原型对象的内部指针， 原型链实现继承 基本思想：利用原型让一个引用类型继承另一个引用类型的属性和方法，即让原型对象等于另一个类型的实例 基本模式： function SuperType(){       this.property =">
-<meta name="twitter:image" content="https://i.imgur.com/4c8P5p1.png">
+<meta name="twitter:image" content="https://zengguanbao.github.io/images/es5jichen.png">
     
 
     
@@ -351,7 +351,7 @@ Subtype.prototype.sayAge = function(){
     console.log(this.age);
 };
 </code></pre><p>优点：只调用了一次supertype构造函数，因此避免在subtype.prototype上创建不必要的，多余的属性，与此同时，原型链还能保持不变，还能正常使用instanceof 和isPrototypeOf()，因此，寄生组合式继承被认为是引用类型最理想的继承范式。</p>
-<p>ES5的继承可以用下图来概括：<br><img src="https://i.imgur.com/4c8P5p1.png" alt></p>
+<p>ES5的继承可以用下图来概括：<br><img src="/images/es5jichen.png" alt></p>
 <p><strong>ES6继承</strong></p>
 <p>es6的继承主要要注意的是class的继承。</p>
 <p>基本用法：Class之间通过使用extends关键字，这比通过修改原型链实现继承，要方便清晰很多</p>
@@ -371,7 +371,7 @@ Subtype.prototype.sayAge = function(){
 <pre><code>class A extends B{}
 A.__proto__ === B;  //继承属性
 A.prototype.__proto__ == B.prototype;//继承方法
-</code></pre><p>总结：<br>ES6的继承可以用下图来概括：<br><img src="https://i.imgur.com/6oig7Wg.png" alt>​</p>
+</code></pre><p>总结：<br>ES6的继承可以用下图来概括：<br><img src="/images/es6jichen.png" alt></p>
 
         </div>
         <footer class="article-footer">
@@ -519,7 +519,7 @@ A.prototype.__proto__ == B.prototype;//继承方法
                             <a href="/2019/05/07/详解ES5和ES6的继承/" class="thumbnail">
     
     
-        <span style="background-image:url(https://i.imgur.com/4c8P5p1.png)" alt class="thumbnail-image"></span>
+        <span style="background-image:url(/images/es5jichen.png)" alt class="thumbnail-image"></span>
     
     
 </a>
